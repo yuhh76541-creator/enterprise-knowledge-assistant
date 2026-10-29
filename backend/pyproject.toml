@@ -1,0 +1,28 @@
+[project]
+name = "enterprise-knowledge-assistant-backend"
+version = "0.1.0"
+description = "Local-first foundation for an enterprise knowledge assistant"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.143.0",
+    "uvicorn==0.54.0",
+    "pydantic-settings==2.15.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx==0.28.1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

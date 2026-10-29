@@ -1,0 +1,30 @@
+# Local configuration and user content
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+data/*
+!data/.gitkeep
+.runtime/
+uploads/
+*.db
+*.db-shm
+*.db-wal
+
+# Python and frontend build products
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/node_modules/
+**/dist/
+*.egg-info/
+*.pyc
+coverage/
+.coverage
+*.tsbuildinfo
+.DS_Store
+.idea/
+.vscode/
